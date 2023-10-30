@@ -1,16 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 15:16:29 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/30 15:34:09 by mpierrot         ###   ########.fr       */
+/*   Created: 2023/09/25 12:49:47 by mpierrot          #+#    #+#             */
+/*   Updated: 2023/10/05 19:56:44 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+char	*ft_strcpy(char *dest, char *src);
 
-#endif
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+	int	tamp;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		tamp = src[i];
+		dest[i] = tamp;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+#include <stdio.h>
+int main()
+{
+char dest[] = "";
+char src[] = "gtg,tpg,t";
+
+	printf("%s", ft_strcpy(dest, src));
+}
