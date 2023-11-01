@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 16:24:16 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/30 17:37:46 by mpierrot         ###   ########.fr       */
+/*   Created: 2023/10/30 17:43:12 by mpierrot          #+#    #+#             */
+/*   Updated: 2023/10/30 18:00:08 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int ft_isascii (int c)
 {
-	if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-			return(1);
-	else
-			return(0);
+    if (c >= 0 && c <= 127)
+        return(1);
+    return(0);
 }
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 int main(int argc, char **argv)
 {
-if (argc != 2)
-		return(0);
-printf("%d", ft_isalpha(argv[1][0]));
+    if (argc != 2)
+    return(0);
+    printf("%d\n", ft_isascii(argv[1][0]));
+    printf("%d", isascii(argv[1][0]));
 }

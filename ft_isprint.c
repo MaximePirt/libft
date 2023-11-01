@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 22:09:19 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/04 15:39:21 by mpierrot         ###   ########.fr       */
+/*   Created: 2023/10/30 17:43:12 by mpierrot          #+#    #+#             */
+/*   Updated: 2023/10/30 18:00:08 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str);
-
-int	ft_str_is_numeric(char *str)
+int ft_isprint(int c)
 {
-	int	i;
+    if(c >= 32 && c <= 126)
+        return(1);
+    return(0);
+}
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 48 && str[i] <= 57)
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+#include <stdio.h>
+#include <ctype.h>
+int main(int argc, char **argv)
+{
+    if (argc != 2)
+    return(0);
+printf("%d\n", ft_isprint(argv[1][0]));
+printf("%d", isprint(argv[1][0]));
+
 }

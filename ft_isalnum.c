@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:01:50 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/04 15:39:12 by mpierrot         ###   ########.fr       */
+/*   Created: 2023/10/30 17:43:12 by mpierrot          #+#    #+#             */
+/*   Updated: 2023/10/30 18:00:08 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str);
-
-int	ft_str_is_alpha(char *str)
+int ft_isalnum (int c)
 {
-	int	i;
+    if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+        return (1);
+    return (0);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+}
+
+#include <stdio.h>
+#include <ctype.h>
+int main(int argc, char **argv)
+{
+    if (argc != 2)
+        return(0);
+    printf("%d\n", ft_isalnum(argv[1][0]));
+    printf("%d", isalnum(argv[1][0]));
 }
