@@ -10,28 +10,44 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+SRCS =  ft_atoi.c \
+        ft_bzero.c \
+        ft_isalnum.c \
+        ft_isalpha.c \
+        ft_isascii.c \
+        ft_isdigit.c \
+        ft_isprint.c \
+        ft_memset.c \
+        ft_memcpy.c \
+        ft_strlen.c \
+        ft_strncmp.c \
 
-CC	= cc
+HEADER = includes
 
-CFLAGS	= -Wall -Wextra -Werror
+NAME = libft.a
 
-SRC = $(wildcard *.o)
+OBJS = $(SRCS:.c=.o)
 
-OBJS	=${.c = .o}
+CFLAGS = -Wall -Wextra -Werror
 
-.c.o: 
-	${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
+CC = gcc
 
-${NAME}: ${OBJS}
-	${CC} -o ${NAME} ${oBJS}
+all : $(NAME)
 
-all:	${NAME}
+$(NAME): $(OBJS)
+    ar rsc $(NAME) $(SRCS)
 
-clean:
-	rm -f ${OBJS}
+clean :
+    rm -rf $(OBJS)
 
-fclean:	clean
+fclean : clean
+    rm -f $(NAME)
 
-re:	fclean all
+re : fclean $(NAME)
+
+.PHONY : clean fclean re
+
+so:
+    $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+    gcc -nostartfiles -shared -o libft.so $(OBJS)
 
