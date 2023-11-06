@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-void *ft_memset (void *s, int c, size_t len)
+void *ft_memset (void *b, int c, size_t len)
 {
     unsigned char   *era;
 
-    era = s;
+    era = b;
 
     while (len--)
     {
         *era++ = (unsigned char) c;
     }
-    return  (s);
+    return  (b);
 }
 
 int main() {
@@ -30,7 +30,7 @@ int main() {
 
     // Initialisation de str avec la lettre 'x' pour une longueur de 50 caractères
     printf("Avant ft_memset : %s\n", str);
-    ft_memset(str, 'x', 49);
+    ft_memset(str, 'x', 5);
     printf("Après ft_memset : %s\n", str);
 
     return 0;
