@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stddef.h>
-#include <stdio.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+    /* la en gros c est memmove*/
 
-    int ft_isalpha(int c);
-    int ft_isdigit (int c);
-    int ft_isalnum (int c);
-    int ft_isascii (int c);
-    int ft_isprint(int c);
-    void ft_bzero (void *s, size_t n);
-    void *ft_memset (void *s, int c, size_t len);
-    void *ft_memcpy (void *dest, const void *src, size_t len);
-    void *ft_memmove (void *dst, const void *src, size_t len);
-    size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-    
-    
-#endif
+	i = 0;
+	while (i+1 < dstsize)
+    {
+        *dst++ = *src++;
+        i++;
+    }
+    if (i < dstsize)
+        *dst = 0;
+    while (*src++)
+        ++i;
+
+return(i);
+}
+
+/*
+#include <string.h>
+int main ()
+{
+char dest[] = "jeanlebg";
+char src[] = "jeanmichel";
+size_t len = 0;
+
+    printf("Avant toutes fonctions : %s\n", dest);
+    ft_strlcpy(dest, src, len);
+    printf("Apres ma fonction : %s\n", dest);
+    strlcpy(dest, src, len);
+    printf("Apres la vraie fonction : %s\n", dest);
+
+} */

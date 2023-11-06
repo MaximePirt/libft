@@ -26,28 +26,28 @@ HEADER = includes
 
 NAME = libft.a
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(FILES:.c=.o)
+
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = gcc
-
-all : $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
-    ar rsc $(NAME) $(SRCS)
+	ar  rsc $(NAME) $(OBJS)
+	ranlib  $(NAME)
+clean:
+	rm -f $(OBJS)
 
-clean :
-    rm -rf $(OBJS)
+fclean: clean
+	rm -f $(NAME)
 
-fclean : clean
-    rm -f $(NAME)
+re: fclean $(NAME)
 
-re : fclean $(NAME)
-
-.PHONY : clean fclean re
+.PHONY: clean fclean re
 
 so:
-    $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-    gcc -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
