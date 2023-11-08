@@ -6,7 +6,7 @@
 #    By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 12:26:58 by mpierrot          #+#    #+#              #
-#    Updated: 2023/11/08 18:28:15 by maxime_pier      ###   ########.fr        #
+#    Updated: 2023/11/08 19:42:17 by maxime_pier      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ clean:
 	@echo "Object files have been removed."
 
 fclean: clean
-	@$(RM) $(NAME)m
+	@$(RM) $(NAME)
 	@echo "$(NAME) has been removed."
 
 re: fclean all
