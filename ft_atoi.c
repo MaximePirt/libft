@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 21:40:04 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/06 02:13:16 by mpierrot         ###   ########.fr       */
+/*   Updated: 2023/11/08 19:24:54 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ int	ft_atoi(char *str)
 	int	a;
 	int	z;
 
-i = 0;
-a = 1;
-z = 0;
+	i = 0;
+	a = 1;
+	z = 0;
 	while ((str[i] >= 7 && str[i] <= 13) || str[i] == 32)
 		i++;
 	while (str[i] == 45 || str[i] == 43)
 	{
 		if (str[i] == 45)
 			a *= -1;
-	i++;
+		i++;
 	}
 	while (str[i] >= 48 && str[i] <= 57)
-	{	
+	{
 		z = z * 10 + (str[i] - '0');
 		i++;
 	}
-z *= a;
+	z *= a;
 	return (z);
 }

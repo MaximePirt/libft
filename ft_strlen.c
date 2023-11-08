@@ -3,35 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 12:04:19 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/09/24 17:00:35 by mpierrot         ###   ########.fr       */
+/*   Updated: 2023/11/08 19:07:48 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_strlen(char	*str);
-
-void	ft_strlen(char	*str)
+size_t	ft_strlen(const char *str)
 {
-	int		i;
-	char	b;
+	int i;
 
 	i = 0;
-	while (str [i] != '\0')
-	{
-	i++;
-	}
-	b = i + 48;
-	return(b);
+	while (str[i])
+		i++;
+	return (i);
 }
-/*
-int main()
-{
-	char *str;
-	str = "jaime";
-	ft_strlen(str);
-}
-*/

@@ -3,26 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:53:03 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:11 by mpierrot         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:10:13 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "stdlib.h"
 
-int	ft_strlen(char	*str)
-{
-	int		i;
-
-	i = 0;
-	while (str [i] != '\0')
-	{
-	i++;
-	}
-	return (i);
-}
+int		ft_strlen(char *str);
 
 char	*ft_strdup(char *src)
 {
@@ -30,9 +20,9 @@ char	*ft_strdup(char *src)
 	int		i;
 	int		len;
 
-i = 0;
-len = ft_strlen(src);
-c = malloc (sizeof(char) * len + 1);
+	i = 0;
+	len = ft_strlen(src);
+	c = malloc(sizeof(char) * len + 1);
 	if (c == NULL)
 		return (NULL);
 	while (src[i] != '\0')

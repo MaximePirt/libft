@@ -3,51 +3,57 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mpierrot <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 12:26:58 by mpierrot          #+#    #+#              #
-#    Updated: 2023/10/30 15:11:35 by mpierrot         ###   ########.fr        #
+#    Updated: 2023/11/08 18:28:15 by maxime_pier      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =  ft_atoi.c \
-        ft_bzero.c \
-        ft_isalnum.c \
-        ft_isalpha.c \
-        ft_isascii.c \
-        ft_isdigit.c \
-        ft_isprint.c \
-        ft_memset.c \
-        ft_memcpy.c \
-        ft_strlen.c \
-        ft_strncmp.c \
+SRC_FILES =  ft_atoi.c \
+         ft_bzero.c \
+         ft_isalnum.c \
+         ft_isalpha.c \
+         ft_isascii.c \
+         ft_isdigit.c \
+         ft_isprint.c \
+         ft_memset.c \
+         ft_memcpy.c \
+		 ft_memmove.c \
+		 ft_strdup.c \
+		 ft_strlcat.c \
+		 ft_strlcpy.c \
+         ft_strlen.c \
+         ft_strncmp.c \
 
-HEADER = includes
+OBJ_FILES = $(SRC_FILES:.c=.o)
+
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
 
-OBJS = $(FILES:.c=.o)
-
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -rf
+MKDIR = mkdir -p
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar  rsc $(NAME) $(OBJS)
-	ranlib  $(NAME)
+$(NAME): $(OBJ_FILES)
+	@$(AR) $@ $^
+	@echo "$(NAME) has been created successfully."
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $?
+
 clean:
-	rm -f $(OBJS)
+	@$(RM) $(OBJ_FILES)
+	@echo "Object files have been removed."
 
 fclean: clean
-	rm -f $(NAME)
+	@$(RM) $(NAME)m
+	@echo "$(NAME) has been removed."
 
-re: fclean $(NAME)
+re: fclean all
 
-.PHONY: clean fclean re
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
-
+.PHONY: all clean fclean re
