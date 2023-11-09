@@ -6,7 +6,7 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:16:29 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/11/09 01:05:40 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/09 01:25:11 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdio.h>
+# include <stdlib.h>
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
