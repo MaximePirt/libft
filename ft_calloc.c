@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 19:43:09 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/08 20:12:09 by maxime_pier      ###   ########.fr       */
+/*   Created: 2023/11/09 01:04:39 by maxime_pier       #+#    #+#             */
+/*   Updated: 2023/11/09 01:05:55 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-    if (c > 96 && c < 123)
-        c-= 32;
     
-    return(c);
 }
