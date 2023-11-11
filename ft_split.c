@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 01:04:39 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/11 19:45:04 by maxime_pier      ###   ########.fr       */
+/*   Created: 2023/11/11 22:47:52 by maxime_pier       #+#    #+#             */
+/*   Updated: 2023/11/11 23:15:14 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+Une fonction qui divise la phrase en comptant le nombre de mots
+Une fonction qui rempli les mots (sera appelee en boucle dans split)
+*/
 
-void	ft_bzero(void *s, size_t n);
 
-void	*ft_calloc(size_t count, size_t size)
+
+char	**ft_split(char const *s, char c)
 {
-	void	*tmp;
-	size_t	mallocsize;
+	char	**dst;
 
-	mallocsize = count * size;
-	tmp = malloc(mallocsize);
-	if (tmp == NULL)
+    if (!s)
 		return (NULL);
-	ft_bzero(tmp, count * size);
-	return (tmp);
+	return (**dst);
 }
