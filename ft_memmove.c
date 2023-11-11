@@ -6,7 +6,7 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:43:12 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/11/08 14:04:26 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/11 19:36:45 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t c;
-
-	c = 0;
+	size_t	c;
 
 	if (!dst && !src)
 		return (0);
-
+	c = 0;
 	if (src < dst)
 	{
 		c = len;

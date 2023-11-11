@@ -6,16 +6,15 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 19:43:09 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/08 20:12:09 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/11 15:28:52 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c > 96 && c < 123)
-        c-= 32;
-    
-    return(c);
+	if (c > 96 && c < 123)
+		c -= 32;
+	return (c);
 }

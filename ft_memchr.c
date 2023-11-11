@@ -6,7 +6,7 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 23:49:52 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/09 00:11:06 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/11 16:20:49 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char *spoint;
-	size_t i;
+	size_t	i;
 
+	if (!s && !c && !n)
+		return (NULL);
 	i = 0;
-	spoint = s;
-	while (((char)c != *spoint) && *spoint && i < n)
+	while (i < n)
 	{
-		spoint++;
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
-	if ((char)c == *spoint)
-		return ((char *)spoint);
-	else
-		return (NULL);
+	return (NULL);
 }

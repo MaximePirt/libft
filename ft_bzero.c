@@ -14,12 +14,11 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int i;
-	unsigned char *era;
+	unsigned int	i;
+	unsigned char	*era;
 
 	i = 0;
 	era = s;
-
 	while (i < n)
 	{
 		era[i] = '\0';

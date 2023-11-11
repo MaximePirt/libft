@@ -6,7 +6,7 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 23:58:03 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/09 00:11:45 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/11 15:20:45 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s1 && !s2)
 		return (0);

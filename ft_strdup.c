@@ -6,15 +6,15 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:53:03 by mpierrot          #+#    #+#             */
-/*   Updated: 2023/11/08 14:10:13 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/11 19:38:20 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*c;
 	int		i;

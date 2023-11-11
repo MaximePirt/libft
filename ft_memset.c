@@ -14,10 +14,9 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *era;
+	unsigned char	*era;
 
 	era = b;
-
 	while (len--)
 	{
 		*era++ = (unsigned char)c;
