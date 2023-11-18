@@ -6,7 +6,7 @@
 #    By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 12:26:58 by mpierrot          #+#    #+#              #
-#    Updated: 2023/11/11 22:49:05 by maxime_pier      ###   ########.fr        #
+#    Updated: 2023/11/18 11:16:42 by maxime_pier      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC_FILES =  ft_atoi.c \
          ft_isascii.c \
          ft_isdigit.c \
          ft_isprint.c \
+		 ft_itoa.c \
 		 ft_memchr.c \
 		 ft_memcmp.c \
          ft_memcpy.c \
