@@ -6,7 +6,7 @@
 /*   By: maxime_pierrot <maxime_pierrot@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 11:15:51 by maxime_pier       #+#    #+#             */
-/*   Updated: 2023/11/18 15:50:46 by maxime_pier      ###   ########.fr       */
+/*   Updated: 2023/11/19 14:32:23 by maxime_pier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static size_t	numlen(int n)
 	return (b);
 }
 
-char	*fillitoa(int n, size_t len, int negative, char *res)
+static char	*fillitoa(int n, size_t len, int negative, char *res)
 {
 	while (n > 0)
 	{
