@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;

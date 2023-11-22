@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src);
-
 static size_t	numlen(int n)
 {
 	size_t	b;

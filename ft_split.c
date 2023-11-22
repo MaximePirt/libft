@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-void	free_split(char **split_result);
-
 static size_t	word_counter(char const *s, char c)
 {
 	size_t	i;
@@ -57,7 +54,7 @@ static char	*copword(char const *s, char c)
 	return (word);
 }
 
-void	free_split(char **split_result)
+static void	free_split(char **split_result)
 {
 	int	i;
 

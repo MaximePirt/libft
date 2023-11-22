@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *str);
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;

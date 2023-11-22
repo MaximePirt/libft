@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
-
-int		ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {

@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-void	ft_putstr_fd(char *s, int fd);
-
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s || !fd)
