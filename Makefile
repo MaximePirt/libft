@@ -6,7 +6,7 @@
 #    By: mpierrot <mpierrot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 12:26:58 by mpierrot          #+#    #+#              #
-#    Updated: 2024/03/12 13:23:53 by mpierrot         ###   ########.fr        #
+#    Updated: 2024/03/14 19:23:50 by mpierrot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRC_FILES = libft/ft_atoi.c libft/ft_bzero.c libft/ft_calloc.c libft/ft_isalnum.
 			libft/ft_strlcpy.c libft/ft_strlen.c libft/ft_strmapi.c libft/ft_strncmp.c \
 			libft/ft_strnstr.c libft/ft_strrchr.c libft/ft_strtrim.c libft/ft_substr.c \
 			libft/ft_tolower.c libft/ft_toupper.c \
+			libft/bonus/ft_lstadd_back.c libft/bonus/ft_lstadd_front.c libft/bonus/ft_lstclear.c \
+			libft/bonus/ft_lstdelone.c libft/bonus/ft_lstiter.c libft/bonus/ft_lstlast.c \
+			libft/bonus/ft_lstmap.c libft/bonus/ft_lstnew.c libft/bonus/ft_lstsize.c\
 			GNL/get_next_line.c GNL/get_next_line_utils.c \
 			ft_printf/ft_printf.c ft_printf/ft_putptrfunc.c ft_printf/ft_usefulfonc.c \
 
