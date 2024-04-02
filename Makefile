@@ -6,23 +6,24 @@
 #    By: mpierrot <mpierrot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 12:26:58 by mpierrot          #+#    #+#              #
-#    Updated: 2024/03/14 19:23:50 by mpierrot         ###   ########.fr        #
+#    Updated: 2024/03/30 03:47:59 by mpierrot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 HDRDIR = includes
-SRC_FILES = libft/ft_atoi.c libft/ft_bzero.c libft/ft_calloc.c libft/ft_isalnum.c \
-			libft/ft_isalpha.c libft/ft_isascii.c libft/ft_isdigit.c libft/ft_isprint.c \
-			libft/ft_itoa.c libft/ft_memchr.c libft/ft_memcmp.c libft/ft_memcpy.c \
-			libft/ft_memmove.c libft/ft_memset.c libft/ft_putchar_fd.c libft/ft_putendl_fd.c \
-			libft/ft_putnbr_fd.c libft/ft_putstr_fd.c libft/ft_split.c libft/ft_strchr.c \
-			libft/ft_strdup.c libft/ft_striteri.c libft/ft_strjoin.c libft/ft_strlcat.c \
-			libft/ft_strlcpy.c libft/ft_strlen.c libft/ft_strmapi.c libft/ft_strncmp.c \
-			libft/ft_strnstr.c libft/ft_strrchr.c libft/ft_strtrim.c libft/ft_substr.c \
-			libft/ft_tolower.c libft/ft_toupper.c \
-			libft/bonus/ft_lstadd_back.c libft/bonus/ft_lstadd_front.c libft/bonus/ft_lstclear.c \
-			libft/bonus/ft_lstdelone.c libft/bonus/ft_lstiter.c libft/bonus/ft_lstlast.c \
-			libft/bonus/ft_lstmap.c libft/bonus/ft_lstnew.c libft/bonus/ft_lstsize.c\
+SRC_FILES = libft/mandatory/ft_atoi.c libft/mandatory/ft_bzero.c libft/mandatory/ft_calloc.c libft/mandatory/ft_isalnum.c \
+			libft/mandatory/ft_isalpha.c libft/mandatory/ft_isascii.c libft/mandatory/ft_isdigit.c libft/mandatory/ft_isprint.c \
+			libft/mandatory/ft_itoa.c libft/mandatory/ft_memchr.c libft/mandatory/ft_memcmp.c libft/mandatory/ft_memcpy.c \
+			libft/mandatory/ft_memmove.c libft/mandatory/ft_memset.c libft/mandatory/ft_putchar_fd.c libft/mandatory/ft_putendl_fd.c \
+			libft/mandatory/ft_putnbr_fd.c libft/mandatory/ft_putstr_fd.c libft/mandatory/ft_split.c libft/mandatory/ft_strchr.c \
+			libft/mandatory/ft_strdup.c libft/mandatory/ft_striteri.c libft/mandatory/ft_strjoin.c libft/mandatory/ft_strlcat.c \
+			libft/mandatory/ft_strlcpy.c libft/mandatory/ft_strlen.c libft/mandatory/ft_strmapi.c libft/mandatory/ft_strncmp.c \
+			libft/mandatory/ft_strnstr.c libft/mandatory/ft_strrchr.c libft/mandatory/ft_strtrim.c libft/mandatory/ft_substr.c \
+			libft/mandatory/ft_tolower.c libft/mandatory/ft_toupper.c \
+			libft/lst/ft_lstadd_back.c libft/lst/ft_lstadd_front.c libft/lst/ft_lstclear.c \
+			libft/lst/ft_lstcpy.c libft/lst/ft_lstdelone.c libft/lst/ft_lstiter.c libft/lst/ft_lstlast.c \
+			libft/lst/ft_lstmap.c libft/lst/ft_lstnew.c libft/lst/ft_lstsize.c libft/lst/ft_pop_push.c libft/lst/ft_print_stack.c \
+			libft/calculs/calcul_mediane.c \
 			GNL/get_next_line.c GNL/get_next_line_utils.c \
 			ft_printf/ft_printf.c ft_printf/ft_putptrfunc.c ft_printf/ft_usefulfonc.c \
 
