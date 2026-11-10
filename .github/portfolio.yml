@@ -1,0 +1,18 @@
+title: Libft
+origin: 42
+domains: [systems]
+summary:
+  fr: 42 • C / Unix
+  en: 42 • C / Unix
+description:
+  fr: >
+    Réimplémentation d'une partie de la libc en C (mémoire, chaînes, listes
+    chaînées) pour le premier projet de 42, compilée en bibliothèque statique
+    et réutilisée dans les projets suivants. Inclut aussi get_next_line et
+    un ft_printf minimal.
+  en: >
+    C re-implementation of a chunk of the standard library (memory, strings,
+    linked lists) for 42 School's first project, built as a static library
+    and reused in later projects. Also bundles get_next_line and a minimal
+    ft_printf.
+stack: [C, Makefile, Unix]
